@@ -153,7 +153,7 @@ export default function ContactUsPage() {
               <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] shrink-0 bg-[#0E326B] rounded-full flex items-center justify-center text-white">
                 <FiMail className="w-[22px] h-[22px] md:w-[32px] md:h-[32px]" />
               </div>
-              <p className="text-[18px] md:text-[20px] text-black duration-300 hover:text-primary"><Link href="mailto:Contact@Empowering.Legal">Contact@Empowering.Legal</Link></p>
+              <p className="text-[18px] md:text-[20px] text-black duration-300 hover:text-primary"><Link href="mailto:Contact@mergerlawyer.com">Contact@mergerlawyer.com</Link></p>
             </div>
 
             {/* Phone */}

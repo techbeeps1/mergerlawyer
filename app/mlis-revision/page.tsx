@@ -228,7 +228,7 @@ export default async function MlisRevisionPage() {
 
           {/* image card */}
           <div className="flex md:flex-row flex-col gap-[25px] w-full">
-            <div className="blur-sm">
+            <div className="blur-sm w-full">
               <ImageReveal delay={0.1} direction="bottom">
                 <Image
                   src="/session-1.jpg"
@@ -240,7 +240,7 @@ export default async function MlisRevisionPage() {
               </ImageReveal>
             </div>
 
-            <div className="blur-sm">
+            <div className="blur-sm w-full">
               <ImageReveal delay={0.2} direction="bottom">
                 <Image
                   src="/session-2.jpg"
@@ -251,7 +251,7 @@ export default async function MlisRevisionPage() {
                 />
               </ImageReveal>
             </div>
-            <div className="blur-sm">
+            <div className="blur-sm w-full">
               <ImageReveal delay={0.3} direction="bottom">
                 <Image
                   src="/session-3.jpg"

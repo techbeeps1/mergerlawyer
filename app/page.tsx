@@ -610,7 +610,7 @@ export default function Home() {
               nextEl: ".test-next-1",
               prevEl: ".test-prev-1",
             }}
-            spaceBetween={24}
+            spaceBetween={60}
             slidesPerView={3}
   //           autoplay={{
   //   delay: 2500,
@@ -632,7 +632,7 @@ export default function Home() {
           >
           {testimonials.map((t, idx) => (
             <SwiperSlide key={t.id}>
-            <div key={t.id + '-' + idx} className="bg-secondary rounded-[20px] p-[24px] md:p-[30px] flex flex-col items-center text-center text-white w-[85vw] sm:w-[350px] md:w-[calc(33.333vw-2.2rem)] min-w-[280px] shrink-0 shadow-md h-auto">
+            <div key={t.id + '-' + idx} className="h-full bg-secondary rounded-[20px] p-[24px] md:p-[30px] flex flex-col items-center text-center text-white w-[85vw] sm:w-[350px] md:w-[calc(33.333vw-2.2rem)] min-w-[280px] shrink-0 shadow-md h-auto">
               <p className="text-[16px] md:text-[18px] lg:text-[20px] font-sans font-medium mb-8 flex-1 whitespace-pre-wrap">
                 {t.text}
               </p>
@@ -684,13 +684,13 @@ export default function Home() {
         
         {/* Left Column: QR Image */}
         <div className="flex justify-center lg:justify-center">
-          <ImageReveal delay={0.1} direction="left">
+          <ImageReveal delay={0.1} direction="left" className="w-full max-w-[667px]">
             <Image 
               src="/QR-scane.jpg" 
               alt="Scan QR Code to Download Ebook" 
               width={550} 
               height={680} 
-              className="w-full object-contain rounded-[20px]"
+              className="w-full rounded-[20px]"
             />
           </ImageReveal>
         </div>

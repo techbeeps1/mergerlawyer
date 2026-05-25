@@ -62,7 +62,7 @@ export default function Footer() {
               <Link href="/" className="hover:text-primary transition-colors text-[16px] md:text-[20px] leading-[1.9]">Home</Link>
               <Link href="/services" className="hover:text-primary transition-colors text-[16px] md:text-[20px] leading-[1.9]">Services</Link>
               <Link href="/attorney" className="hover:text-primary transition-colors text-[16px] md:text-[20px] leading-[1.9]">Attorney</Link>
-              <Link href="/insights" className="hover:text-primary transition-colors text-[16px] md:text-[20px] leading-[1.9]">Insights</Link>
+              <Link href="/blog" className="hover:text-primary transition-colors text-[16px] md:text-[20px] leading-[1.9]">Insights</Link>
               <Link href="/mlis-revision" className="hover:text-primary transition-colors text-[16px] md:text-[20px] leading-[1.9]">MLIS</Link>
               <Link href="/contact-us" className="hover:text-primary transition-colors text-[16px] md:text-[20px] leading-[1.9]">Contact</Link>
             </div>
@@ -86,8 +86,8 @@ export default function Footer() {
             <div className="flex flex-col gap-4 text-[#111111]">
               <div className="flex items-center gap-4">
                 <FaEnvelope className="text-[18px] md:text-[22px] mt-1 shrink-0" />
-                <a href="mailto:contact@empowering.legal" className="text-[15px] md:text-[20px] font-normal leading-tight md:leading-[1.9] hover:text-primary transition-colors break-words">
-                  contact@empowering.legal
+                <a href="mailto:contact@mergerlawyer.com" className="text-[15px] md:text-[20px] font-normal leading-tight md:leading-[1.9] hover:text-primary transition-colors break-words">
+                  contact@mergerlawyer.com
                 </a>
               </div>
               <div className="flex items-center gap-4">
@@ -119,13 +119,13 @@ export default function Footer() {
               />
               <div className="flex flex-col text-black text-[15px] md:text-[20px] font-heading font-bold leading-tight md:leading-[1.9]">
                 <p>Name: Syeda Nazifa Nawroj</p>
-                <p className="break-all md:break-normal "><Link href="mailto:syeda@empowering.legal">Email: syeda@empowering.legal</Link></p>
+                <p className="break-all md:break-normal "><Link href="mailto:syeda@mergerlawyer.com">Email: syeda@mergerlawyer.com</Link></p>
               </div>
             </div>
 
             <h3 className="text-[22px] md:text-[26px] font-heading font-bold leading-[1.3] text-[#111111] mb-4">Follow Us On:</h3>
             <div className="flex items-center gap-3">
-              <a href="#https://www.facebook.com/EmpoweringLegalSolutions/" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+              <a href="https://www.facebook.com/EmpoweringLegalSolutions/" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
                 <FaFacebookF size={18} className="md:w-5 md:h-5" />
               </a>
               <a href="https://www.instagram.com/empowering_legal_solutions/" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center text-white hover:opacity-80 transition-opacity">

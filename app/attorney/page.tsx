@@ -48,8 +48,7 @@ export default async function AttorneyPage() {
   return (
     <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">
 
-      {/* Header — absolute positioned, overlays the hero */}
-      <Header />
+
 
       {/* ── HERO SECTION ── */}
       <section className="relative w-full min-h-[800px] flex flex-col items-center justify-center overflow-hidden pb-[80px]">
@@ -59,7 +58,7 @@ export default async function AttorneyPage() {
           alt="Hero background"
           fill
           priority
-          className="object-cover object-center z-0"
+          className="object-cover object-center z-0 w-full"
         />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/20 z-[1]"></div>
@@ -131,7 +130,7 @@ export default async function AttorneyPage() {
             </FadeUp>
           </div>
           {/* right: Photo */}
-          <div className="flex justify-start lg:order-2 order-1">
+          <div className="lg:order-2 order-1">
             <div className="relative">
               <ImageReveal delay={0.2} direction="left">
                 <Image
@@ -150,7 +149,7 @@ export default async function AttorneyPage() {
       <section className="w-full mt-[30px]">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-[30px] items-center"> 
           {/* left: Photo */}
-          <div className="flex justify-start">
+          <div >
             <div className="relative">
               <ImageReveal delay={0.2} direction="right">
                 <Image
