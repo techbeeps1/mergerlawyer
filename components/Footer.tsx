@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaYoutube, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6"; // X logo
+import { FaFacebookF, FaInstagram, FaYoutube, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -126,17 +125,17 @@ export default function Footer() {
 
             <h3 className="text-[22px] md:text-[26px] font-heading font-bold leading-[1.3] text-[#111111] mb-4">Follow Us On:</h3>
             <div className="flex items-center gap-3">
-              <a href="#" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+              <a href="#https://www.facebook.com/EmpoweringLegalSolutions/" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
                 <FaFacebookF size={18} className="md:w-5 md:h-5" />
               </a>
-              <a href="#" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+              <a href="https://www.instagram.com/empowering_legal_solutions/" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
                 <FaInstagram size={18} className="md:w-5 md:h-5" />
               </a>
-              <a href="#" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-[#FF0000] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
+              <a href="https://www.youtube.com/@EmpoweringLegalSolutionsPC" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-[#FF0000] flex items-center justify-center text-white hover:opacity-80 transition-opacity">
                 <FaYoutube size={18} className="md:w-5 md:h-5" />
               </a>
-              <a href="#" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-black flex items-center justify-center text-white hover:opacity-80 transition-opacity">
-                <FaXTwitter size={18} className="md:w-5 md:h-5" />
+              <a href="https://www.linkedin.com/company/empowering-legal-solutions/" className="w-[36px] h-[36px] md:w-[40px] md:h-[40px] rounded-full bg-[#0077B5] flex items-center justify-center text-white hover:opacity-80 transition-opacity">       
+                 <FaLinkedinIn size={18} className="md:w-5 md:h-5"  />
               </a>
             </div>
           </div>

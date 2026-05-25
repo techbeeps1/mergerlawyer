@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,9 +36,10 @@ export default function RootLayout({
       className={`${inter.variable} ${geistMono.variable} ${libreBaskerville.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <div className="flex-1">
+        <Header />
+        <main className="flex-1">
           {children}
-        </div>
+        </main>
         <Footer />
       </body>
     </html>

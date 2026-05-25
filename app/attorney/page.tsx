@@ -4,13 +4,47 @@ import FadeUp from "@/components/gsap/FadeUp";
 import AnimatedCard from "@/components/gsap/AnimatedCard";
 import ImageReveal from "@/components/gsap/ImageReveal";
 import { Metadata } from "next";
+import Link from "next/link";
+import { ADMIN_BASE_URL } from "@/config/api";
 
 export const metadata: Metadata = {
   title: "Attorney - Merger Lawyer",
   description: "Meet Syeda Nazifa Nawroj, Founder of Empowering Legal Solutions PC",
 };
+type Transaction = {
+  id: number;
+  title: string;
+  slug: string;
+  category: string;
+  amount: string;
+  transaction_type: string;
+  short_description: string;
+  button_text: string;
+  button_url: string;
+  featured_image: string;
+};
 
-export default function AttorneyPage() {
+async function getTransactions(): Promise<Transaction[]> {
+  const res = await fetch(
+    ADMIN_BASE_URL + '/api/transactions', 
+    { headers: {
+        'Content-Type': 'application/json',
+        'X-API-KEY':  'tbs-6zQ6v8m4J2q9p3X7',
+      },
+      cache: 'no-store',
+    }
+  );
+  if (!res.ok) {
+    throw new Error('Failed to fetch transactions');
+  }
+  return res.json();
+}
+
+
+
+export default async function AttorneyPage() {
+    const transactions = await getTransactions();
+
   return (
     <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">
 
@@ -262,40 +296,11 @@ export default function AttorneyPage() {
           {/* Grid */}
         
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px] md:gap-[25px] w-full">
-            {[
-              {
-                tag: "Artificial Intelligence",
-                title: "NeuralTech AI",
-                amount: "$85M",
-                subtitle: "Series B Acquisition",
-                description: "Strategic acquisition by Fortune 500 enterprise software company"
-              },
-              {
-                tag: "HealthTech",
-                title: "HealthStream Analytics",
-                amount: "$42M",
-                subtitle: "Strategic Exit",
-                description: "Exit to healthcare infrastructure provider with earnout structure"
-              },
-              {
-                tag: "Cloud Infrastructure",
-                title: "QuantumScale",
-                amount: "$128M",
-                subtitle: "Merger",
-                description: "Merger with complementary platform to create market leader"
-              },
-              {
-                tag: "FinTech",
-                title: "FinEdge Solutions",
-                amount: "$67M",
-                subtitle: "Private Equity Acquisition",
-                description: "Platform acquisition by growth equity firm"
-              }
-            ].map((tx, idx) => (
+            {transactions.map((tx, idx) => (
               <AnimatedCard delay={idx * 0.1} key={idx} className="bg-secondary rounded-[24px] md:rounded-[32px] lg:rounded-[40px] p-[24px] md:p-[30px] lg:p-[36px] flex flex-col items-start h-full">
                 {/* Tag */}
                 <div className="bg-primary text-white text-[14px] lg:text-[18px] font-medium font-sans px-[12px] lg:px-[14px] py-[6px] lg:py-[8px] leading-snug lg:leading-[20px] text-center rounded-full mb-[20px] lg:mb-[30px]">
-                  {tx.tag}
+                  {tx.category}
                 </div>
                 
                 {/* Title & Amount */}
@@ -303,27 +308,31 @@ export default function AttorneyPage() {
                   <h3 className="font-heading font-bold text-[24px] md:text-[28px] lg:text-[34px] text-black leading-tight lg:leading-[46px]">
                     {tx.title}
                   </h3>
+                  {tx.amount &&
                   <span className="font-heading font-bold text-[24px] md:text-[28px] lg:text-[34px] text-black leading-tight lg:leading-[46px]">
-                    {tx.amount}
+                    {tx.amount} {'$'}
                   </span>
+                }
                 </div>
                 
                 {/* Subtitle */}
                 <p className="font-sans font-medium text-[18px] lg:text-[24px] text-[#172C5B] leading-snug lg:leading-[30px] mb-[16px] lg:mb-[20px]">
-                  {tx.subtitle}
+                  {tx.transaction_type}
                 </p>
                 
                 {/* Description */}
                 <p className="font-sans font-medium text-[16px] lg:text-[20px] text-black leading-normal lg:leading-[30px] mb-[20px] lg:mb-[24px]">
-                  {tx.description}
+                  {tx.short_description}
                 </p>
                 
                 {/* Button */}
-                <div className="mt-auto">
-                  <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-bold leading-none transition-all cursor-pointer border-none">
-                    View Case Study
-                  </button>
-                </div>
+                {tx.button_text && (
+                  <div className="mt-auto">
+                    <Link  href={tx.button_url} className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-bold leading-none transition-all cursor-pointer border-none">
+                      {tx.button_text}
+                    </Link>
+                  </div>
+                )}
               </AnimatedCard>
             ))}
           </div>

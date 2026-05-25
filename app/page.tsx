@@ -25,37 +25,37 @@ const steps = [
 
 const testimonials = [
   {
-    id: 1,
+    id: 6,
     text: "Syeda and her law firm, Empowering Legal Solutions, were quick and professional to assist me in getting the legal paperwork and foundation established for my company, especially during a particularly difficult time in my life. Couldn't have asked for a more competent and reliable attorney to work with. When we meet, we get down to business, address any problems, and the rest is just pleasant conversation. On a more personal note, it has also been an honor to watch her launch ELS and grow the law firm that anyone would be proud of. I highly recommend her to anybody who is looking for legal services",
     name: "Evan Blackmon",
     company: "Align Accounting LLC"
   },
   {
-    id: 2,
+    id: 7,
     text: "Syeda and ELS guided us through a complex tax deferred spin off and separation transaction, spinning out NewCo from OldCo alongside a broader restructure. She was proactive, thoughtful, and pulled in the right additional resources when needed to ensure every detail was handled correctly. Beyond the legal work, she helped draft clear communications for internal stakeholders and investors, and she ran a disciplined process so I always knew what steps were required, where we stood, and what was next. We have continued working with Syeda as our go to counsel and plan to keep partnering with her as we scale.",
     name: "Waleed Mohsen",
     company: "Verbal AI Technologies, Inc."
   },
   {
-    id: 3,
+    id: 8,
     text: "Empowering Legal Solutions PC has been instrumental in supporting the growth of HopeLine Connections from day one. Syeda exceeded my expectations from the start. When founding HopeLine Connections, she handled our registration seamlessly and continued providing dedicated legal support throughout the year. Beyond her strong legal expertise, Syeda demonstrated genuine care for our success by connecting us with important contacts who helped us grow. She is fast, reliable, and trustworthy, exactly what you need in a legal partner. I'm grateful for her support and highly recommend her services.",
     name: "Yusuf Alzaeem",
     company: "Hopeline Connections"
   },
   {
-    id: 1,
+    id: 9,
     text: "Syeda and her law firm, Empowering Legal Solutions, were quick and professional to assist me in getting the legal paperwork and foundation established for my company, especially during a particularly difficult time in my life. Couldn't have asked for a more competent and reliable attorney to work with. When we meet, we get down to business, address any problems, and the rest is just pleasant conversation. On a more personal note, it has also been an honor to watch her launch ELS and grow the law firm that anyone would be proud of. I highly recommend her to anybody who is looking for legal services",
     name: "Evan Blackmon",
     company: "Align Accounting LLC"
   },
   {
-    id: 2,
+    id: 10,
     text: "Syeda and ELS guided us through a complex tax deferred spin off and separation transaction, spinning out NewCo from OldCo alongside a broader restructure. She was proactive, thoughtful, and pulled in the right additional resources when needed to ensure every detail was handled correctly. Beyond the legal work, she helped draft clear communications for internal stakeholders and investors, and she ran a disciplined process so I always knew what steps were required, where we stood, and what was next. We have continued working with Syeda as our go to counsel and plan to keep partnering with her as we scale.",
     name: "Waleed Mohsen",
     company: "Verbal AI Technologies, Inc."
   },
   {
-    id: 3,
+    id: 11,
     text: "Empowering Legal Solutions PC has been instrumental in supporting the growth of HopeLine Connections from day one. Syeda exceeded my expectations from the start. When founding HopeLine Connections, she handled our registration seamlessly and continued providing dedicated legal support throughout the year. Beyond her strong legal expertise, Syeda demonstrated genuine care for our success by connecting us with important contacts who helped us grow. She is fast, reliable, and trustworthy, exactly what you need in a legal partner. I'm grateful for her support and highly recommend her services.",
     name: "Yusuf Alzaeem",
     company: "Hopeline Connections"
@@ -114,7 +114,9 @@ export default function Home() {
 
   return (
     <>
-    <main className="relative flex flex-col w-full min-h-screen items-center justify-start overflow-x-hidden bg-[#1A2530]">
+  
+
+    <section className="relative flex flex-col w-full min-h-screen items-center justify-start overflow-x-hidden bg-[#1A2530]">
       
       {/* Background Image Wrapper */}
       <div 
@@ -150,7 +152,7 @@ export default function Home() {
         </ImageReveal>
       </div>
 
-      <Header />
+
       
       <div className="relative z-20 w-full container px-4 sm:px-8 md:px-6 lg:px-10 h-full flex flex-col justify-start pt-8 md:pt-32 pb-0 flex-1 md:min-h-[800px]">
         
@@ -204,7 +206,7 @@ export default function Home() {
 
         </div>
       </div>
-    </main>
+    </section>
 
     <LogoMarquee />
 
@@ -231,7 +233,7 @@ export default function Home() {
         </FadeUp>
         <FadeUp delay={0.4}>
         <h3 className="mt-6 md:mt-4 text-[18px] sm:text-[20px] md:text-[24px] lg:text-[30px] font-bold font-heading text-black max-w-[1225px] leading-relaxed lg:leading-[46px] text-center">
-          When your counterparty shows up with a full team of advisors, having the right counsel on your side isn't optional -- it's the deal.
+         {"When your counterparty shows up with a full team of advisors, having the right counsel on your side isn't optional -- it's the deal."}
         </h3>
         </FadeUp>
 
@@ -440,6 +442,7 @@ export default function Home() {
 
       </div>
     </section>
+
      <section className="w-full mt-[100px]">
       <div className="container grid lg:grid-cols-2 gap-[44px] items-center">
           {/* MAIN IMAGE CARD */}
@@ -529,7 +532,7 @@ export default function Home() {
           <div className="w-full lg:w-[40%] max-w-[650px] flex flex-col items-start gap-5">
              <FadeUp delay={0.4}>
             <p className="text-[16px] md:text-[18px] lg:text-[20px] font-sans font-medium text-black leading-relaxed">
-              For many founders, choosing counsel is not just about credentials. It is about judgment, communication, and trust. This section should connect visitors with Syeda's presence, clarity, and strategic style before they ever book a call.
+              For many founders, choosing counsel is not just about credentials. It is about judgment, communication, and trust. This section should connect visitors with {"Syeda's"} presence, clarity, and strategic style before they ever book a call.
             </p>
             </FadeUp>
              <FadeUp delay={0.6}>
@@ -591,7 +594,7 @@ export default function Home() {
         {/* Subtitle */}
         <FadeUp delay={0.2}>
         <p className="text-[16px] md:text-[18px] lg:text-[20px] font-sans font-medium text-black text-center mb-6 md:mb-10">
-          Trust matters most when the stakes are high. These testimonials reflect the blend of technical excellence, strategic judgment, and personal commitment clients value in Merger Lawyer's work.
+          Trust matters most when the stakes are high. These testimonials reflect the blend of technical excellence, strategic judgment, and personal commitment clients value in {"Merger Lawyer's"} work.
         </p>
         </FadeUp>
       </div>

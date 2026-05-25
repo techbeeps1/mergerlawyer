@@ -48,16 +48,16 @@ export default function Header() {
         {/* Right side: Socials & Button (Desktop) */}
         <div className="hidden lg:flex items-center gap-6">
           <div className="flex items-center gap-3">
-            <Link href="#" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+            <Link href="https://www.facebook.com/EmpoweringLegalSolutions/" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
               <FaFacebookF size={15} />
             </Link>
-            <Link href="#" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+            <Link href="https://www.youtube.com/@EmpoweringLegalSolutionsPC" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
               <FaYoutube size={15} />
             </Link>
-            <Link href="#" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+            <Link href="https://www.linkedin.com/company/empowering-legal-solutions/" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
               <FaLinkedinIn size={15} />
             </Link>
-            <Link href="#" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+            <Link href="https://www.instagram.com/empowering_legal_solutions/" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
               <FaInstagram size={15} />
             </Link>
           </div>

@@ -1,0 +1,1 @@
+export const ADMIN_BASE_URL = "https://admin.mergerlawyer.com";

@@ -13,8 +13,96 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import { ADMIN_BASE_URL } from "@/config/api";
+import { useEffect, useState } from "react";
+
+
+type MilsCompanions = {
+   id: string;
+   title: string;
+   slug: string;
+   short_description: string;
+   hero_image: string | null;
+};
+
+type Blogs = {
+   id: string;
+   title: string;
+   slug: string;
+   short_description: string;
+   feature_image: string | null;
+ 
+};
+
+
+async function getMilsCompanions(): Promise<MilsCompanions[]> {
+  const res = await fetch(ADMIN_BASE_URL + "/api/mils-companions", {
+    headers: {
+      "X-API-KEY": "tbs-6zQ6v8m4J2q9p3X7",
+    },
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    return [];
+  }else {
+  return res.json();
+  }
+}
+
+async function getBlogs(): Promise<Blogs[]> {
+  const res = await fetch(ADMIN_BASE_URL + "/api/posts", {
+    headers: {
+      "X-API-KEY": "tbs-6zQ6v8m4J2q9p3X7",
+    },
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    return [];
+  }else {
+  return res.json();
+  }
+}
+
+
 export default function BlogPage() {
-  
+const [Companion , setCompanion] = useState<MilsCompanions[]>([]);
+const [blogs, setBlogs] = useState<Blogs[]>([]);
+const [blogs1, setBlogs1] = useState<Blogs[]>([]);
+  useEffect(() => { 
+
+getBlogs().then((data) => {
+
+if (data.length <= 3) {
+  // Only first slider
+  setBlogs(data);
+  setBlogs1([]);
+
+} else if (data.length <= 6) {
+  // Max 3-3 split
+  setBlogs(data.slice(0, 3));
+  setBlogs1(data.slice(3));
+
+} else {
+  // More than 6 => 50%-50% split
+  const mid = Math.floor(data.length / 2);
+
+  setBlogs(data.slice(0, mid));
+  setBlogs1(data.slice(mid));
+}
+
+}).catch((error) => {
+  console.error("Error fetching blogs:", error);  
+});
+getMilsCompanions().then((data) => {
+  setCompanion(data);
+}).catch((error) => {
+  console.error("Error fetching MILS Companions:", error);  
+});
+
+
+  }, [])
+
+
  const slides = [
   {
     id: 1,
@@ -46,82 +134,13 @@ export default function BlogPage() {
   },
 ];
 
-const blogs = [
-  {
-    id: 1,
-    title: "Strategic Corporate Restructuring for Growth-Stage Companies",
-    image: "/blog1.jpg",
-    desc: "Understanding when and how to restructure your corporate entity for optimal tax, investor, and exit readiness.",
-  },
-  {
-    id: 2,
-    title: "Understanding Indemnification Agreements in Corporate Law",
-    image: "/blog2.jpg",
-    desc: "Learn how indemnification protects directors and executives while managing governance and risk.",
-  },
-  {
-    id: 3,
-    title: "California’s DROP: What Data Brokers Need to Know",
-    image: "/blog3.jpg",
-    desc: "New compliance rules for data brokers and how evolving privacy laws impact operations.",
-  },
-  {
-    id: 4,
-    title: "AI-Driven M&A: Trends Shaping 2025 Deal Activity",
-    image: "/blog4.jpg",
-    desc: "Explore how artificial intelligence is influencing due diligence, valuations, and dealmaking.",
-  },
-  {
-    id: 5,
-    title: "QSBS Updates: What Founders Need to Know",
-    image: "/blog5.jpg",
-    desc: "Understand new tax changes affecting Qualified Small Business Stock and startup exits.",
-  },
-  {
-    id: 6,
-    title: "The U.S. AI Action Plan: Legal Implications for Businesses",
-    image: "/blog6.jpg",
-    desc: "How new federal AI initiatives are shaping compliance, innovation, and risk exposure.",
-  },
-  {
-    id: 7,
-    title: "VC AI Color: What It Signals for the Future of Startups",
-    image: "/blog7.jpg",
-    desc: "Insights into emerging startup trends and the next generation of AI companies.",
-  },
-];
-const Companion = [
-  {
-    id: 1,
-    title: "M&A Law & Entrepreneurship",    
-    desc: "A breakdown of key legal considerations founders must understand when preparing for acquisition, including deal structure, negotiation dynamics, and common pitfalls.",
-  },
-  {
-    id: 2,
-    title: "AI in M&A Transactions",    
-    desc: "How artificial intelligence is reshaping dealmaking, due diligence, and legal risk frameworks in modern transactions.",
-  },
-  {
-    id: 3,
-    title: "Founder Strategy in High-Stakes Deals",    
-    desc: "Practical insights into navigating negotiations, managing advisors, and protecting value in complex transactions.",
-  }, 
-  {
-    id: 4,
-    title: "Founder Strategy in High-Stakes Deals",    
-    desc: "Practical insights into navigating negotiations, managing advisors, and protecting value in complex transactions.",
-  }, 
-];
 
-const firstRow = blogs.slice(0, 4);
-const Card = Companion.slice(0, 4);
+const Card = Companion
 
   return (
     <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">
-      {/* Header — absolute positioned, overlays the hero */}
-      <Header />
 
-      {/* ── HERO SECTION ── */}
+      <Header />
       <section className="relative w-full min-h-[800px] flex flex-col items-center justify-center overflow-hidden pb-[80px]">
         {/* Background Image */}
         <Image
@@ -175,7 +194,7 @@ const Card = Companion.slice(0, 4);
           {slides.map((study, idx) => (
             <AnimatedCard
               delay={idx * 0.1}
-              key={study.id + Math.random()}
+              key={study.id}
               className="group relative flex-shrink-0 h-[400px] md:h-[428px] rounded-[24px] md:rounded-[32px] overflow-hidden flex flex-col justify-end snap-start"
             >
               {/* Image */}              
@@ -268,22 +287,24 @@ const Card = Companion.slice(0, 4);
               },
             }}
           >
-            {firstRow.map((blog) => (
+            {blogs.map((blog) => (
               <SwiperSlide key={blog.id}>
                 <div className="bg-white shadow-[2px_3px_6px_0px_#00000040] px-[20px] rounded-[40px] py-[32px] h-full">
                   
                   <ImageReveal delay={0.1} direction="top" className="relative md:h-[286px] h-[220px] rounded-[20px]">
+                  { blog?.feature_image && (
                     <Image
-                      src={blog.image}
+                     src={ADMIN_BASE_URL + '/storage/' + blog?.feature_image}
                       alt={blog.title}
                       fill
                       className="object-cover rounded-[20px]"
                     />
+                  )}
                   </ImageReveal>
 
                   <div className="mt-[22px]">
                     <span className="text-black">
-                      April 26, 2026
+                      April 26, 2026 
                     </span>
 
                     <h3 className="text-[20px] text-black hover:text-primary duration-400 font-semibold leading-[1.3] mt-2 mb-3 line-clamp-2">
@@ -293,7 +314,7 @@ const Card = Companion.slice(0, 4);
                     </h3>
 
                     <p className="text-black text-[18px] leading-[24px] mb-5 line-clamp-2">
-                      {blog.desc}
+                      {blog.short_description}
                     </p>
 
                     <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
@@ -320,8 +341,8 @@ const Card = Companion.slice(0, 4);
           <Swiper
            modules={[Navigation, Autoplay]}
             navigation={{
-              nextEl: ".blog-next-1",
-              prevEl: ".blog-prev-1",
+              nextEl: ".blog-next-2",
+              prevEl: ".blog-prev-2",
             }}
             spaceBetween={24}
             slidesPerView={3}
@@ -343,22 +364,24 @@ const Card = Companion.slice(0, 4);
               },
             }}
           >
-            {firstRow.map((blog) => (
+            {blogs1.map((blog) => (
               <SwiperSlide key={blog.id}>
                 <div className="bg-white shadow-[2px_3px_6px_0px_#00000040] px-[20px] rounded-[40px] py-[32px] h-full">
                   
                   <ImageReveal delay={0.1} direction="top" className="relative md:h-[286px] h-[220px] rounded-[20px]">
+                  { blog?.feature_image && (
                     <Image
-                      src={blog.image}
+                      src={ADMIN_BASE_URL + '/storage/' + blog?.feature_image}
                       alt={blog.title}
                       fill
                       className="object-cover rounded-[20px]"
                     />
+                  )}
                   </ImageReveal>
 
                   <div className="mt-[22px]">
                     <span className="text-black">
-                      April 26, 2026
+                      April 26, 2026 
                     </span>
 
                     <h3 className="text-[20px] text-black hover:text-primary  duration-400 font-semibold leading-[1.3] mt-2 mb-3 line-clamp-2">
@@ -369,7 +392,7 @@ const Card = Companion.slice(0, 4);
                     </h3>
 
                     <p className="text-black text-[18px] leading-[24px] mb-5 line-clamp-2">
-                      {blog.desc}
+                      {blog.short_description}
                     </p>
 
                     <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
@@ -382,11 +405,11 @@ const Card = Companion.slice(0, 4);
           </Swiper>
 
           {/* Navigation */}
-          <button className="blog-prev-1 text-[20px]  cursor-pointer absolute top-1/2 -left-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+          <button className="blog-prev-2 text-[20px]  cursor-pointer absolute top-1/2 -left-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
             <IoIosArrowForward className="rotate-180"/>
           </button>
 
-          <button className="blog-next-1 text-[20px] cursor-pointer absolute top-1/2 -right-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+          <button className="blog-next-2 text-[20px] cursor-pointer absolute top-1/2 -right-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
             <IoIosArrowForward />
           </button>
         </div>
@@ -453,7 +476,7 @@ const Card = Companion.slice(0, 4);
                 </h3>
 
                 <p className="text-black text-[16px] md:text-[18px] leading-[1.5] mb-5 line-clamp-3">
-                  {Companion.desc}
+                  {Companion.short_description}
                 </p>
 
                 <button className="bg-primary mx-auto flex items-center gap-2 hover:bg-[#153a6a] text-white py-[14px] px-[35px] md:px-[45px] rounded-full text-[16px] md:text-[18px] transition-all">
