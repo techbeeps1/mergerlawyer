@@ -310,7 +310,7 @@ export default async function AttorneyPage() {
                   </h3>
                   {tx.amount &&
                   <span className="font-heading font-bold text-[24px] md:text-[28px] lg:text-[34px] text-black leading-tight lg:leading-[46px]">
-                    {tx.amount} {'$'}
+                     {'$'}{tx.amount}
                   </span>
                 }
                 </div>
