@@ -19,9 +19,7 @@ export default function ContactUsPage() {
 
 
   return (
-    <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">
-      {/* Header — absolute positioned, overlays the hero */}
-      <Header />
+    <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">   
 
       {/* ── HERO SECTION ── */}
       <section className="relative w-full min-h-[800px] flex flex-col items-center justify-center overflow-hidden pb-[80px]">

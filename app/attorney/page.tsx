@@ -47,9 +47,6 @@ export default async function AttorneyPage() {
 
   return (
     <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">
-
-
-
       {/* ── HERO SECTION ── */}
       <section className="relative w-full min-h-[800px] flex flex-col items-center justify-center overflow-hidden pb-[80px]">
         {/* Background Image */}
@@ -88,8 +85,8 @@ export default async function AttorneyPage() {
               <span className="text-[24px] md:text-[28px] lg:text-[32px] leading-[24px] font-bold font-heading text-white mb-1">
                 35+ M&A
               </span>
-              <span className="font-heading font-bold text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] mt-1 lg:mt-2">
-                transactions advised
+              <span className="font-heading font-bold text-white text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] mt-1 lg:mt-2">
+                Transactions advised
               </span>
             </div>
             </FadeUp>
@@ -103,8 +100,8 @@ export default async function AttorneyPage() {
               <span className="text-[24px] md:text-[28px] lg:text-[32px] leading-[24px] font-bold font-heading text-white mb-1">
                 $3B Nearly
               </span>
-              <span className="font-heading font-bold text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px]  mt-1 lg:mt-2">
-                total deal value experience
+              <span className="font-heading font-bold text-white text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px]  mt-1 lg:mt-2">
+                Total deal value experience
               </span>       
             </div>
             </FadeUp>
@@ -243,7 +240,11 @@ export default async function AttorneyPage() {
                 </h3>
                 <ul className="flex flex-col gap-3">
                   {[
-                    "2025 U.S.–Bangladesh Chamber of Commerce & Industry Women's Entrepreneur Award (5th Entrepreneur Awards Program)",
+                     <>
+    2025 U.S.–Bangladesh Chamber of Commerce & Industry Women's Entrepreneur Award
+    <br />
+    (5th Entrepreneur Awards Program)
+  </>,
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-[16px] md:text-[18px] lg:text-[20px] font-sans font-medium text-black leading-relaxed lg:leading-[36px]">
                       <span className="mt-[6px] lg:mt-[10px] w-[6px] h-[6px] lg:w-[7px] lg:h-[7px] rounded-full bg-black shrink-0" />
@@ -327,7 +328,7 @@ export default async function AttorneyPage() {
                 {/* Button */}
                 {tx.button_text && (
                   <div className="mt-auto">
-                    <Link  href={tx.button_url} className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-bold leading-none transition-all cursor-pointer border-none">
+                    <Link  href={tx.button_url} className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
                       {tx.button_text}
                     </Link>
                   </div>
@@ -459,7 +460,7 @@ export default async function AttorneyPage() {
                     {media.title}
                   </h3>
                   
-                  <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-bold leading-none transition-all cursor-pointer border-none self-start">
+                  <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none self-start">
                     Watch Now
                   </button>
                 </div>
@@ -475,7 +476,7 @@ export default async function AttorneyPage() {
           </FadeUp>
           {/* Bottom CTA Button */}
           <FadeUp delay={0.4}>
-          <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-bold leading-none transition-all cursor-pointer border-none">
+          <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
             Book a Speaking Engagement
           </button>
           </FadeUp>
@@ -545,7 +546,7 @@ export default async function AttorneyPage() {
         </p>
         </FadeUp>
         <FadeUp delay={0.6}>
-        <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-bold leading-none transition-all cursor-pointer border-none">
+        <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
           View Representative Transactions
         </button>
         </FadeUp>

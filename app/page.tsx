@@ -132,14 +132,14 @@ export default function Home() {
       {/* Giant "Merger Lawyer" Text Background Layer */}
       {/* Centered with pure clamp() values for both gap and text size so it perfectly scales */}
       
-      <div className="absolute top-[15%] md:top-[18%] left-1/2 -translate-x-1/2 w-full flex justify-center gap-[clamp(10px,6vw,250px)] z-0 opacity-100 pointer-events-none select-none">
-         <span className="text-[clamp(30px,11vw,206px)] font-heading font-bold text-white leading-none capitalize whitespace-nowrap">Merger</span>
-         <span className="text-[clamp(30px,11vw,206px)] font-heading font-bold text-white leading-none capitalize whitespace-nowrap">Lawyer</span>
+      <div className="absolute top-[15%] md:top-[22%] left-1/2 -translate-x-1/2 w-full flex justify-between gap-[clamp(10px,13vw,250px)] 2xl:px-[50px] px-[20px] z-0 opacity-100 pointer-events-none select-none">
+         <span className="text-[clamp(30px,10vw,206px)] font-heading font-bold text-white leading-none capitalize whitespace-nowrap">Merger</span>
+         <span className="text-[clamp(30px,10vw,206px)] font-heading font-bold text-white leading-none capitalize whitespace-nowrap">Lawyer</span>
       </div>
 
       {/* The Woman Image */}
       {/* Mobile: relative to flow under Merger Lawyer. Desktop: absolute bottom center */}
-      <div className="md:absolute relative md:bottom-0 md:left-1/2 md:-translate-x-1/2 mt-[22vh] sm:mt-[25vh] md:mt-0 z-10 h-[45vh] sm:h-[50vh] md:h-[60%] lg:h-[85%] max-h-[900px] w-full md:w-auto flex justify-center pointer-events-none select-none">
+      <div className="md:absolute relative md:bottom-0 md:left-[48%] md:-translate-x-1/2 mt-[22vh] sm:mt-[25vh] md:mt-0 z-10 h-[50vh] sm:h-[60vh] md:h-[65%] lg:h-[88%] max-h-[900px] w-full md:w-auto flex justify-center pointer-events-none select-none">
         <ImageReveal delay={0.2} direction="bottom" className="h-full w-auto">
           <Image 
             src="/Nazifa-4.png" 
@@ -169,19 +169,19 @@ export default function Home() {
               <FadeUp delay={0.2}>
               <div className="border-b border-white/60 pb-3 w-full">              
                 <h3 className="text-[24px] md:text-[28px] lg:text-[32px] leading-[24px] font-bold font-heading text-white mb-1">35+ M&A</h3>
-                <p className="font-heading font-bold text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] text-gray-200 mt-1 lg:mt-2">transactions advised</p>
+                <p className="font-heading font-bold text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] text-gray-200 mt-1 lg:mt-2">Transactions advised</p>
               </div>
               </FadeUp>
               <FadeUp delay={0.4}>
               <div className="border-b border-white/60 pb-3 w-full">
                 <h3 className="text-[24px] md:text-[28px] lg:text-[32px] leading-[24px] font-bold font-heading text-white mb-1">$3B Nearly</h3>
-                <p className="font-heading font-bold text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] text-gray-200 mt-1 lg:mt-2">total deal value experience</p>
+                <p className="font-heading font-bold text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] text-gray-200 mt-1 lg:mt-2">Total deal value experience</p>
               </div>
               </FadeUp>
               <FadeUp delay={0.6}>
               <div className="border-b border-white/60 pb-3 w-full">
                 <h3 className="text-[24px] md:text-[28px] lg:text-[32px] leading-[24px] font-bold font-heading text-white mb-1">$25M Boutique</h3>
-                <p className="font-heading font-bold text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] text-gray-200 mt-1 lg:mt-2">focus on private tech deals under</p>
+                <p className="font-heading font-bold text-[16px] lg:text-[18px] leading-[20px] lg:leading-[24px] text-gray-200 mt-1 lg:mt-2">Focus on private tech deals under</p>
               </div>
               </FadeUp>
             </div>
@@ -226,7 +226,7 @@ export default function Home() {
       {/* Main Content Container */}
       <div className="relative z-10 w-full container px-4 sm:px-8 md:px-10 flex flex-col items-center text-center">
         <FadeUp delay={0.2}>
-        <h2 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[64px] font-heading font-medium text-black leading-[42px] md:leading-[60px] text-center">
+        <h2 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[64px] font-heading font-medium text-black leading-[42px] md:leading-[84px] text-center">
           In Lower Middle-Market M&A,<br className="hidden md:block" />
           Sophisticated Buyers Often Arrive Better Equipped Than Founders
         </h2>
@@ -261,7 +261,7 @@ export default function Home() {
       </FadeUp>
 
       {/* Timeline Container */}
-      <div className="relative w-full max-w-[1240px] mx-auto px-4 sm:px-8">
+      <div className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-8">
         
         {/* Central Vertical Line */}
         <div className="absolute left-[38.5px] md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-[#1C4A87] z-0"></div>
@@ -310,7 +310,7 @@ export default function Home() {
                 {/* Desktop Right Column & Mobile All Column */}
                 <div className={`flex flex-1 justify-start pl-[80px] sm:pl-[90px] md:pl-12 lg:pl-16 w-full ${!isEven ? 'md:invisible' : ''}`}>
                   <div className={`${!isEven ? 'block md:hidden' : ''} w-full max-w-[510px] rounded-[24px] md:rounded-[30px] py-6 px-5 md:py-[35px] md:px-[25px] transition-all duration-500 border ${isActive ? 'bg-secondary border-transparent scale-[1.02] md:scale-105' : 'bg-secondary/30 border-secondary shadow-[2px_2px_24px_0px_rgba(0,0,0,0.15)]'}`}>
-                    <h3 className="text-[20px] md:text-[26px] leading-tight md:leading-[30px] font-medium font-heading mb-2 md:mb-3 transition-colors duration-500 text-[#111111]">{step.title}</h3>
+                    <h3 className="text-[20px] md:text-[28px] leading-tight md:leading-[30px] font-medium font-heading mb-2 md:mb-3 transition-colors duration-500 text-[#111111]">{step.title}</h3>
                     <p className={`text-[15px] md:text-[20px] font-sans font-normal leading-relaxed md:leading-[34px] transition-colors duration-500 ${isActive ? 'text-[#0A1A2E]' : 'text-[#111111]'}`}>{step.desc}</p>
                   </div>
                 </div>
@@ -324,7 +324,7 @@ export default function Home() {
 
       {/* Button */}
       <div className="mt-12 md:mt-24 relative z-20">
-        <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
+        <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all cursor-pointer border-none">
           Read a Case Study
         </button>
       </div>
@@ -435,7 +435,7 @@ export default function Home() {
 
         {/* Bottom Button */}
         <div className="mt-16 md:mt-20">
-          <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
+          <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all cursor-pointer border-none">
             View All Services
           </button>
         </div>
@@ -443,7 +443,7 @@ export default function Home() {
       </div>
     </section>
 
-     <section className="w-full mt-[100px]">
+     <section className="w-full md:mt-[100px] mt-[60px]">
       <div className="container grid lg:grid-cols-2 gap-[44px] items-center">
           {/* MAIN IMAGE CARD */}
           <div className="relative shape z-10 pl-[30px] pt-[30px] w-full
@@ -486,6 +486,7 @@ export default function Home() {
               "Nearly $3B deal value experience",
               "NYU School of Law",
               "Executive Editor, NYU Law Review",
+              "Full scholarship to Mount Holyoke",
               "Founder of Merger Lawyer",
               "Author of Sell Your Start-Up",
             ].map((item, index) => (
@@ -500,7 +501,7 @@ export default function Home() {
           </ul>
            </FadeUp>
            <FadeUp delay={0.6}>
-          <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none">
+          <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none">
             View Attorney Profile
           </button>
           </FadeUp>
@@ -600,9 +601,9 @@ export default function Home() {
       </div>
 
       {/* Slider Container (Custom Smooth Auto-play) */}
-      <div className="w-full px-4 sm:px-8 overflow-hidden pb-8 pt-4">
+      <div className="w-full px-4 sm:px-8 overflow-hidden pt-4">
         <div
-          className="flex gap-[16px]  md:gap-[20px] items-stretch w-full"         
+          className="flex gap-[16px] relative  md:gap-[20px] items-stretch w-full"         
         >
           <Swiper
            modules={[Navigation, Autoplay]}
@@ -610,8 +611,8 @@ export default function Home() {
               nextEl: ".test-next-1",
               prevEl: ".test-prev-1",
             }}
-            spaceBetween={60}
-            slidesPerView={3}
+            spaceBetween={30}
+            slidesPerView={2}
   //           autoplay={{
   //   delay: 2500,
   //   disableOnInteraction: true,
@@ -623,7 +624,7 @@ export default function Home() {
                 slidesPerView: 1,
               },
               640: {
-                slidesPerView: 2,
+                slidesPerView: 1,                
               },
               1024: {
                 slidesPerView: 3,
@@ -632,7 +633,7 @@ export default function Home() {
           >
           {testimonials.map((t, idx) => (
             <SwiperSlide key={t.id}>
-            <div key={t.id + '-' + idx} className="h-full bg-secondary rounded-[20px] p-[24px] md:p-[30px] flex flex-col items-center text-center text-white w-[85vw] sm:w-[350px] md:w-[calc(33.333vw-2.2rem)] min-w-[280px] shrink-0 shadow-md h-auto">
+            <div key={t.id + '-' + idx} className="h-full w-full bg-secondary rounded-[20px] p-[24px] md:p-[30px] flex flex-col items-center text-center text-white shrink-0 shadow-md h-auto">
               <p className="text-[16px] md:text-[18px] lg:text-[20px] font-sans font-medium mb-8 flex-1 whitespace-pre-wrap">
                 {t.text}
               </p>
@@ -652,18 +653,18 @@ export default function Home() {
           ))}
           </Swiper>
            {/* Navigation */}
-            <button className="blog-prev-1 text-[20px]  cursor-pointer absolute top-1/2 left-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
-              <IoIosArrowForward className="rotate-180"/>
+            <button className="test-prev-1 text-[20px]  cursor-pointer text-white absolute top-1/2 left-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+              <IoIosArrowForward className="rotate-180 "/>
             </button>          
-            <button className="test-next-1 text-[20px] cursor-pointer absolute top-1/2 right-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+            <button className="test-next-1 text-[20px] cursor-pointer text-white absolute top-1/2 right-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
               <IoIosArrowForward />
             </button>
         </div>
       </div>
 
       {/* Button Container (Constrained) */}
-      <div className="w-full container px-4 sm:px-8 flex flex-col items-center mt-8 md:mt-[56px]">
-        <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none">
+      <div className="w-full container px-4 sm:px-8 flex flex-col items-center mt-[36px]">
+        <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none">
           Read a Case Study
         </button>
       </div>
@@ -680,30 +681,30 @@ export default function Home() {
         <Image src="/ELS_logo_icon2.png" alt="Decoration" height={505} width={317}/>
       </div>
 
-      <div className="relative z-10 w-full container px-4 sm:px-8 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-[20px] items-center">
+      <div className="relative z-10 w-full container px-4 sm:px-8 md:px-10 grid grid-cols-1 lg:grid-cols-[667fr_773fr] gap-[20px] items-center">
         
         {/* Left Column: QR Image */}
         <div className="flex justify-center lg:justify-center">
-          <ImageReveal delay={0.1} direction="left" className="w-full max-w-[667px]">
+          <ImageReveal delay={0.1} direction="left" className="w-full ">
             <Image 
               src="/QR-scane.jpg" 
               alt="Scan QR Code to Download Ebook" 
               width={550} 
               height={680} 
-              className="w-full rounded-[20px]"
+              className="w-full rounded-[20px] w-full"
             />
           </ImageReveal>
         </div>
 
         {/* Right Column: Content */}
-        <div className="flex flex-col items-start text-left max-w-[650px] mx-auto lg:mx-0">
+        <div className="flex flex-col items-start text-left mx-auto lg:mx-0">
            <FadeUp delay={0.2}>
-          <h2 className="text-[36px] sm:text-[40px] md:text-[50px] lg:text-[64px] font-heading font-medium text-black leading-[42px] md:leading-[60px] lg:leading-[74px] mb-6">
+          <h2 className="text-[36px] sm:text-[40px] md:text-[50px] lg:text-[54px] font-heading font-bold text-black leading-[42px] md:leading-[60px] lg:leading-[74px] mb-6">
             Download the M&A Guide
           </h2>
           </FadeUp>
           <FadeUp delay={0.4}>
-          <p className="text-[16px] md:text-[18px] lg:text-[20px] font-sans font-medium text-black leading-relaxed mb-8">
+          <p className="text-[16px] md:text-[18px] lg:text-[20px] font-sans text-black leading-relaxed mb-8">
             Sell Your Start-Up is a founder-friendly guide designed to make the M&A process clearer, less intimidating, and more strategic. It is a strong lead magnet for founders who may not be ready to engage counsel yet, but need trusted guidance now.
           </p>
           </FadeUp>
@@ -741,7 +742,7 @@ export default function Home() {
             </FadeUp>
           </div>
             <FadeUp delay={1}>
-          <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none">
+          <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none">
             Download the Ebook
           </button>
           </FadeUp>
@@ -753,7 +754,7 @@ export default function Home() {
     {/* Next Section: Founders */}
     <section className="relative w-full mt-[60px] md:mt-[100px] flex justify-center items-center pb-[60px] md:pb-[100px]">    
 
-      <div className="relative z-10 w-full container px-4 sm:px-8 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-[20px] items-center">
+      <div className="relative z-10 w-full container px-4 sm:px-8 md:px-10 grid grid-cols-1 lg:grid-cols-[585fr_829fr] gap-[20px] items-center">
         
         {/* Left Column: Image Container */}
         <div className="relative
@@ -774,7 +775,7 @@ export default function Home() {
             alt="founders-img" 
             width={585} 
             height={779} 
-            className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-auto object-cover rounded-[24px] md:rounded-[32px]"
+            className="w-full lg:h-auto object-cover rounded-[24px] md:rounded-[32px]"
           />
           </ImageReveal>
           <p className="absolute z-20 bottom-[24px] md:bottom-[34px] px-[24px] md:px-[30px] text-white text-[18px] sm:text-[20px] md:text-[24px] lg:text-[34px] leading-[1.3] md:leading-[32px] lg:leading-[44px] italic font-heading font-bold">
@@ -785,7 +786,7 @@ export default function Home() {
         </div>
 
         {/* Right Column: Content */}
-        <div className="flex flex-col items-start text-left max-w-[650px] mx-auto lg:mx-0 w-full">
+        <div className="flex flex-col items-start text-left mx-auto lg:mx-0 w-full">
           <FadeUp delay={0.2}>
           <h2 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[64px] font-heading font-medium text-black leading-[1.1] lg:leading-[74px] mb-6 md:mb-8">
             Insights for Founders
@@ -804,7 +805,7 @@ export default function Home() {
                 </p>
                 </FadeUp>
                 <FadeUp delay={0.2}>
-                <button className="bg-primary hover:bg-[#153a6a] text-white py-[14px] px-[36px] md:py-[16px] md:px-[40px] lg:px-[50px] rounded-[40px] text-[15px] md:text-[16px] lg:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
+                <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[15px] md:text-[16px] lg:text-[20px] font-normal leading-none transition-all cursor-pointer border-none">
             Read More
           </button>
                 </FadeUp>
@@ -822,7 +823,7 @@ export default function Home() {
                 </p>
                 </FadeUp>
                 <FadeUp delay={0.2}>
-                <button className="bg-primary hover:bg-[#153a6a] text-white py-[14px] px-[36px] md:py-[16px] md:px-[40px] lg:px-[50px] rounded-[40px] text-[15px] md:text-[16px] lg:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
+                <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[15px] md:text-[16px] lg:text-[20px] font-normal leading-none transition-all cursor-pointer border-none">
             Watch Videos
           </button>
           </FadeUp>

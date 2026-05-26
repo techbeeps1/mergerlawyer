@@ -44,10 +44,7 @@ export default async function MlisRevisionPage() {
   console.log(webinars);
 
   return (
-    <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">
-      {/* Header — absolute positioned, overlays the hero */}
-      <Header />
-
+    <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden"> 
       {/* ── HERO SECTION ── */}
       <section className="relative w-full min-h-[800px] flex flex-col items-center justify-center overflow-hidden pb-[80px]">
         {/* Background Image */}
@@ -67,7 +64,7 @@ export default async function MlisRevisionPage() {
           <div className="max-w-[1000px]">
             <FadeUp delay={0.2}>
               <h1 className="text-[44px] sm:text-[56px] md:text-[68px] lg:text-[80px] font-heading font-bold text-white mb-6 leading-[1.1] drop-shadow-lg">
-                MLIS is Merger Lawyer Insight Series
+                MLIS Is Merger Lawyer Insight Series
               </h1>
             </FadeUp>
 
@@ -85,7 +82,7 @@ export default async function MlisRevisionPage() {
           key={webinar.id}
           className="relative w-full mt-[60px] md:mt-[100px] flex justify-center items-center pb-[60px] md:pb-[100px]"
         >
-          <div className="relative z-10 w-full container px-4 sm:px-8 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-[20px] items-center">
+          <div className="relative z-10 w-full container px-4 sm:px-8 md:px-10 grid grid-cols-1 lg:grid-cols-[585fr_829fr] gap-[20px] items-center">
             {/* Left Column: Image Container */}
             <div
               className="relative
@@ -104,7 +101,7 @@ export default async function MlisRevisionPage() {
               <ImageReveal
                 delay={0.2}
                 direction="left"
-                className="h-[400px] sm:h-[500px] md:h-[600px] lg:h-auto rounded-[24px] md:rounded-[32px]"
+                className=" rounded-[24px] md:rounded-[32px]"
               >
                 <Image
                   src={
@@ -114,7 +111,7 @@ export default async function MlisRevisionPage() {
                   alt="founders-img"
                   width={585}
                   height={779}
-                  className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-auto object-cover rounded-[24px] md:rounded-[32px]"
+                  className="w-full rounded-[24px] md:rounded-[32px]"
                 />
               </ImageReveal>
               <p
@@ -126,7 +123,7 @@ export default async function MlisRevisionPage() {
             </div>
 
             {/* Right Column: Content */}
-            <div className="flex flex-col items-start text-left max-w-[650px] mx-auto lg:mx-0 w-full">
+            <div className="flex flex-col items-start text-left w-full">
               <FadeUp>
                 <h2 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[64px] font-heading font-medium text-black leading-[1.1] lg:leading-[74px] mb-6 md:mb-8">
                   {webinar?.title || "Upcoming Webinar"}
@@ -168,7 +165,7 @@ export default async function MlisRevisionPage() {
                   <FadeUp delay={0.14}>
                     <Link
                       href={webinar?.button_url || "#"}
-                      className="inline-block bg-primary hover:bg-[#153a6a] mt-[30px] text-white py-[14px] px-[36px] md:py-[16px] md:px-[40px] lg:px-[50px] rounded-[40px] text-[15px] md:text-[16px] lg:text-[18px] font-normal leading-none transition-all cursor-pointer border-none"
+                      className="inline-block bg-primary hover:bg-[#153a6a] mt-[30px] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all cursor-pointer border-none"
                     >
                       {webinar?.button_text || "Register Now"}
                     </Link>
@@ -219,7 +216,7 @@ export default async function MlisRevisionPage() {
                 </p>
               </FadeUp>
               <FadeUp delay={0.4}>
-                <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none mt-2">
+                <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none mt-2">
                   Register Now
                 </button>
               </FadeUp>
@@ -287,7 +284,7 @@ export default async function MlisRevisionPage() {
             </p>
           </FadeUp>
           <FadeUp delay={0.6}>
-            <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-bold leading-none transition-all cursor-pointer border-none">
+            <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
               View Insights & Articles
             </button>
           </FadeUp>

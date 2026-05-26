@@ -173,8 +173,7 @@ export default function BlogPage() {
   const Card = Companion;
 
   return (
-    <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">
-      <Header />
+    <main className="relative flex flex-col w-full items-center justify-start bg-white overflow-x-hidden">      
       <section className="relative w-full min-h-[800px] flex flex-col items-center justify-center overflow-hidden pb-[80px]">
         {/* Background Image */}
         <Image
@@ -209,9 +208,9 @@ export default function BlogPage() {
         className="relative w-full mt-[60px] md:mt-[100px]"
         id="case-studies"
       >
-        <div className="container px-4 sm:px-8 md:px-10">
+        <div className="container px-0">
           {/* Header – reuse same styling as original */}
-          <div className="mb-12 md:mb-[30px] flex flex-col items-start text-left">
+          <div className="mb-12 md:mb-[30px] px-4 flex flex-col items-start text-left">
             <FadeUp>
               <h2 className="text-[36px] sm:text-[40px] md:text-[50px] lg:text-[64px] font-heading font-medium text-black leading-[42px] md:leading-[60px] lg:leading-[74px] mb-4">
                 Case Studies
@@ -296,11 +295,11 @@ export default function BlogPage() {
               ))}
             </Swiper>
 
-            <button className="slider-prev-1 text-[20px]  cursor-pointer absolute top-1/2 -left-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+            <button className="slider-prev-1 text-[20px]  cursor-pointer absolute top-1/2 text-white left-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
               <IoIosArrowForward className="rotate-180" />
             </button>
 
-            <button className="slider-next-1 text-[20px] cursor-pointer absolute top-1/2 -right-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+            <button className="slider-next-1 text-[20px] cursor-pointer absolute top-1/2 right-0 z-10 text-white -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
               <IoIosArrowForward />
             </button>
           </div>
@@ -373,11 +372,11 @@ export default function BlogPage() {
               ))}
             </Swiper>
 
-            <button className="slider-prev-2 text-[20px]  cursor-pointer absolute top-1/2 -left-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+            <button className="slider-prev-2 text-[20px] text-white  cursor-pointer absolute top-1/2 left-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
               <IoIosArrowForward className="rotate-180" />
             </button>
 
-            <button className="slider-next-2 text-[20px] cursor-pointer absolute top-1/2 -right-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+            <button className="slider-next-2 text-[20px] text-white cursor-pointer absolute top-1/2 right-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
               <IoIosArrowForward />
             </button>
           </div>
@@ -482,7 +481,7 @@ export default function BlogPage() {
                           {blog.short_description}
                         </p>
 
-                        <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
+                        <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all cursor-pointer border-none">
                           Read More
                         </button>
                       </div>
@@ -492,11 +491,11 @@ export default function BlogPage() {
               </Swiper>
 
               {/* Navigation */}
-              <button className="blog-prev-1 text-[20px]  cursor-pointer absolute top-1/2 -left-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+              <button className="blog-prev-1 text-[20px] text-white  cursor-pointer absolute top-1/2 left-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
                 <IoIosArrowForward className="rotate-180" />
               </button>
 
-              <button className="blog-next-1 text-[20px] cursor-pointer absolute top-1/2 -right-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+              <button className="blog-next-1 text-[20px] text-white cursor-pointer absolute top-1/2 right-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
                 <IoIosArrowForward />
               </button>
             </div>
@@ -560,7 +559,7 @@ export default function BlogPage() {
                           {blog.short_description}
                         </p>
 
-                        <button className="bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
+                        <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all cursor-pointer border-none">
                           Read More
                         </button>
                       </div>
@@ -570,11 +569,11 @@ export default function BlogPage() {
               </Swiper>
 
               {/* Navigation */}
-              <button className="blog-prev-2 text-[20px]  cursor-pointer absolute top-1/2 -left-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+              <button className="blog-prev-2 text-[20px] text-white  cursor-pointer absolute top-1/2 left-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
                 <IoIosArrowForward className="rotate-180" />
               </button>
 
-              <button className="blog-next-2 text-[20px] cursor-pointer absolute top-1/2 -right-5 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
+              <button className="blog-next-2 text-[20px] text-white cursor-pointer absolute top-1/2 right-0 z-10 -translate-y-1/2 bg-primary w-11 h-11 rounded-full shadow flex items-center justify-center">
                 <IoIosArrowForward />
               </button>
             </div>
@@ -582,7 +581,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="relative w-full my-[60px] md:my-[100px] ">
+      <section className="relative w-full my-[60px] md:my-[100px] companion_sec ">
         <div className="relative z-10 container">
           {/* Section Title */}
           <div className="max-w-[1045px] mx-auto mb-[40px]">
@@ -637,11 +636,11 @@ export default function BlogPage() {
                         {Companion.title}
                       </h3>
 
-                      <p className="text-black text-[16px] md:text-[18px] leading-[1.5] mb-5 line-clamp-3">
+                      <p className="text-black text-[16px] md:text-[18px] leading-[1.5] mb-5 ">
                         {Companion.short_description}
                       </p>
 
-                      <button className="bg-primary mx-auto flex items-center gap-2 hover:bg-[#153a6a] text-white py-[14px] px-[35px] md:px-[45px] rounded-full text-[16px] md:text-[18px] transition-all">
+                      <button className="bg-primary cursor-pointer mx-auto flex items-center gap-2 hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] transition-all">
                         Read Summary
                         <FiArrowRight />
                       </button>

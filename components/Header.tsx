@@ -29,12 +29,10 @@ export default function Header() {
             src="/ELS_Logo.png" 
             alt="Merger Lawyer Logo" 
             width={160} 
-            height={60} 
-            className="object-contain w-[140px] lg:w-[160px] h-auto"
+            height={60}            
             priority
           />
         </Link>
-
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 font-normal leading-none tracking-normal">
           <Link href="/" className="hover:text-gray-300 transition-colors">Home</Link>

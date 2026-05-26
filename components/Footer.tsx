@@ -42,7 +42,7 @@ export default function Footer() {
                 placeholder="Enter Your Email" 
                 className="w-full bg-transparent border-b-2 border-black text-black placeholder:text-black py-3 outline-none focus:border-primary transition-colors text-[16px] md:text-[20px] font-normal rounded-none"
               />
-              <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-bold leading-none transition-all cursor-pointer border-none">
+              <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
                 Subscribe
               </button>
             </div>
@@ -111,15 +111,15 @@ export default function Footer() {
             
             <div className="flex items-center gap-4 mb-8">
               <Image 
-                src="/Nazifa.jpg" 
-                alt="Syeda Nazifa Nawroj" 
+                src="/footer-nazifa-img.jpg" 
+                alt="footer-nazifa" 
                 width={108} 
                 height={131} 
                 className="w-[80px] h-[100px] md:w-[108px] md:h-[131px] object-cover rounded-[10px]"
               />
               <div className="flex flex-col text-black text-[15px] md:text-[20px] font-heading font-bold leading-tight md:leading-[1.9]">
                 <p>Name: Syeda Nazifa Nawroj</p>
-                <p className="break-all md:break-normal "><Link href="mailto:syeda@mergerlawyer.com">Email: syeda@mergerlawyer.com</Link></p>
+                <p className="break-all"><Link href="mailto:syeda@mergerlawyer.com">Email: syeda@mergerlawyer.com</Link></p>
               </div>
             </div>
 
@@ -148,7 +148,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center w-full">
           <p className="text-[14px] sm:text-[16px] md:text-[20px] font-normal text-center text-[#111111]">
-            © 2026 <span className="font-bold">Empowering Legal Solutions</span> PC, d/b/a Merger Lawyer. Designed & Developed by <span className="font-bold">Esclatech</span>.
+            © 2026 <span className="font-bold">Empowering Legal Solutions</span> PC, d/b/a Merger Lawyer.
           </p>
         </div>
 
