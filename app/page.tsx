@@ -198,7 +198,7 @@ export default function Home() {
               </p>
             </FadeUp>
             <FadeUp delay={0.6}>
-            <Link href="/contact-us"  className="bg-primary block hover:bg-white hover:text-primary text-white pt-[14px] pr-[35px] pb-[14px] pl-[35px] lg:pt-[16px] lg:pr-[49px] lg:pb-[16px] lg:pl-[49px] rounded-[40px] text-[16px] lg:text-[18px] font-normal leading-none transition-all mt-2 md:mt-4 border border-transparent cursor-pointer">
+            <Link href="/contact-us"  className="bg-primary block hover:bg-white hover:text-primary text-white py-[16px] px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all mt-2 md:mt-4 border border-transparent cursor-pointer">
               Book a Call
             </Link>
             </FadeUp>
@@ -243,7 +243,7 @@ export default function Home() {
         </p>
         </FadeUp>
         <FadeUp delay={0.7}>
-        <Link href="/contact-us" className="mt-[30px] block bg-primary hover:bg-[#153a6a] text-white py-[16px] px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all cursor-pointer border-none">
+        <Link href="/contact-us" className="mt-[30px] block bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all cursor-pointer border-none">
           Book a Call
         </Link>
         </FadeUp>
@@ -537,7 +537,7 @@ export default function Home() {
             </p>
             </FadeUp>
              <FadeUp delay={0.6}>
-            <Link href="/contact-us" className="bg-primary block hover:bg-[#153a6a] text-white py-[16px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[18px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none mt-2">
+            <Link href="/contact-us" className="bg-primary block hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all cursor-pointer border-none mt-2">
               Book a Call
             </Link>
              </FadeUp>

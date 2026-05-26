@@ -59,7 +59,7 @@ export default function Header() {
               <FaInstagram size={15} />
             </Link>
           </div>
-          <Link href="/contact-us" className=" block bg-primary hover:bg-white hover:text-primary text-white pt-[16px] pr-[49px] pb-[16px] pl-[49px] rounded-[40px] text-[18px] font-normal leading-none transition-all border border-transparent shadow-lg cursor-pointer">
+          <Link href="/contact-us" className=" block bg-primary hover:bg-white hover:text-primary text-white py-[17px] px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all border border-transparent shadow-lg cursor-pointer">
             Book a Call
           </Link>
         </div>
