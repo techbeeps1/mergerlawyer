@@ -216,9 +216,9 @@ export default async function MlisRevisionPage() {
                 </p>
               </FadeUp>
               <FadeUp delay={0.4}>
-                <button className="bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all shadow-lg cursor-pointer border-none mt-2">
+                <Link href={"/contact-us"} className="bg-primary inline-block hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all cursor-pointer border-none mt-2">
                   Register Now
-                </button>
+                </Link>
               </FadeUp>
             </div>
           </div>
@@ -284,9 +284,9 @@ export default async function MlisRevisionPage() {
             </p>
           </FadeUp>
           <FadeUp delay={0.6}>
-            <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
+            <Link href={"/blog"} className="w-full inline-block sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
               View Insights & Articles
-            </button>
+            </Link>
           </FadeUp>
         </div>
       </section>

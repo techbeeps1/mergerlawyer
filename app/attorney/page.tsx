@@ -279,7 +279,7 @@ export default async function AttorneyPage() {
       </section>
 
       {/* ── RECENT TRANSACTIONS SECTION ── */}
-      <section className="w-full mt-[100px]">
+      <section className="w-full mt-[100px]" id="recent-ransactions">
         <div className="container flex flex-col items-center">
           {/* Section Title */}
           <FadeUp delay={0.2}>
@@ -328,7 +328,7 @@ export default async function AttorneyPage() {
                 {/* Button */}
                 {tx.button_text && (
                   <div className="mt-auto">
-                    <Link  href={tx.button_url} className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
+                    <Link  href={tx.button_url} className="w-full inline-block sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
                       {tx.button_text}
                     </Link>
                   </div>
@@ -546,9 +546,9 @@ export default async function AttorneyPage() {
         </p>
         </FadeUp>
         <FadeUp delay={0.6}>
-        <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
+        <Link href={"#recent-ransactions"} className="w-full inline-block sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
           View Representative Transactions
-        </button>
+        </Link>
         </FadeUp>
         </div>
       </section>
