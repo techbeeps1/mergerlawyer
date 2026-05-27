@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
+import { FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram, FaBars, FaTimes, } from 'react-icons/fa';
+import { FaBluesky } from "react-icons/fa6";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -57,6 +58,9 @@ export default function Header() {
             </Link>
             <Link href="https://www.instagram.com/empowering_legal_solutions/" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
               <FaInstagram size={15} />
+            </Link>
+            <Link href="https://bsky.app/profile/empowerlegalnow.bsky.social" className="w-[38px] h-[38px] rounded-full border border-white flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+              <FaBluesky size={15}/>
             </Link>
           </div>
           <Link href="/contact-us" className=" block bg-primary hover:bg-white hover:text-primary text-white py-[17px] px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-normal leading-none transition-all border border-transparent shadow-lg cursor-pointer">

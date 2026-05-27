@@ -476,9 +476,9 @@ export default async function AttorneyPage() {
           </FadeUp>
           {/* Bottom CTA Button */}
           <FadeUp delay={0.4}>
-          <button className="w-full sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
+          <Link href="/contact-us" className="w-full inline-block sm:w-auto bg-primary hover:bg-[#153a6a] text-white py-[17px] px-[40px] md:px-[50px] rounded-[40px] text-[16px] md:text-[20px] font-bold leading-none transition-all cursor-pointer border-none">
             Book a Speaking Engagement
-          </button>
+          </Link>
           </FadeUp>
         </div>
       </section>
